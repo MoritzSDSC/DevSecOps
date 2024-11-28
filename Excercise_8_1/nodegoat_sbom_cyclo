@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.4" serialNumber="urn:uuid:1c290203-f23d-419c-8cbf-68c678bfbfa6" version="1">
+  <metadata>
+    <timestamp>2024-11-28T20:39:02.572Z</timestamp>
+    <tools>
+        <tool>
+            <vendor>RetireJS</vendor>
+            <name>retire.js</name>
+            <version>5.2.5</version>
+        </tool>
+    </tools>
+  </metadata>
+  <components>
+    <component type="library">
+      <name>jquery</name>
+      <version>1.10.2</version>
+          <hashes>
+            <hash alg="MD5">e3f24f23b859cf718282e3806ed5ce38</hash>
+            <hash alg="SHA-1">c92a61cb4fbc23adb05973638f60e2999bed4a26</hash>
+            <hash alg="SHA-256">e0108076470765be9ef1e9b242b8a52ef78c8f4532c7263426abc05ea4b60240</hash>
+            <hash alg="SHA-512">84b7b499ab6fc2deb2a2539f011a7455a5220532b181d372489b4a04facdf0c17588051b746c184f92da77c4c972366b9d1390555292e5e54caabedc03f3495f</hash>
+          </hashes>
+      <licenses><expression>MIT</expression></licenses>
+      <purl>pkg:npm/jquery@1.10.2</purl>
+      <modified>false</modified>
+    </component>
+    <component type="library">
+      <name>bootstrap</name>
+      <version>3.0.0</version>
+          <hashes>
+            <hash alg="MD5">009474ef7077db3674f18cc37439ef32</hash>
+            <hash alg="SHA-1">56a7790abde2d014778373a57203cc760634fbd6</hash>
+            <hash alg="SHA-256">193001e451f4fadfe52d8b7b542b57bde2102492ca1318c39a1b91ce9c20266f</hash>
+            <hash alg="SHA-512">3385c001bae574e3c2d5de0921e06f6532dca411deece8e790f79b376115f9617a8d428e83ce3a40df38b7ec03de9ac57353719ab973f4a63adf7e2b8ae16b0d</hash>
+          </hashes>
+      <licenses><expression>MIT</expression></licenses>
+      <purl>pkg:npm/bootstrap@3.0.0</purl>
+      <modified>false</modified>
+    </component>
+  </components>
+</bom>
