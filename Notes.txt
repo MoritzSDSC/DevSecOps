@@ -1,0 +1,50 @@
+Retire
+
+NodeGoat
+
+jQuery 1.x and 2.x are End-of-Life and no longer receiving security updates
+CWE-1104
+low
+
+3rd party CORS request may execute
+CVE-2015-9251
+medium
+
+WebGoat
+
+jQuery 1.x and 2.x are End-of-Life and no longer receiving security updates
+CWE-1104
+low
+
+XSS in data-container property of tooltip
+CVE-2018-14042
+medium
+
+
+npm Audit
+
+Node Goat
+Regular Expression Denial of Service in debug
+3.7
+CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L
+CWE-400
+
+
+Express.js Open Redirect in malformed URLs
+6.1
+CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+CWE-601
+CWE-1286
+
+decode-uri-component vulnerable to Denial of Service (DoS)
+7.5
+CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+CWE-20
+
+Code injection in fsevents
+9.8
+CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+CWE-94
+
+
+
