@@ -6,23 +6,25 @@ on:
       - opened
 
 jobs:
-  label_new_issue:
+  add-label:
     runs-on: ubuntu-latest
     steps:
-      - name: Check if issue has labels
-        id: check-labels
+      # 1. Füge das Label hinzu, wenn ein neues Issue erstellt wird
+      - name: Add Label to New Issue
         uses: actions/github-script@v6
         with:
           script: |
             const issue = context.payload.issue;
-            if (issue.labels.length === 0) {
-              return true; // No labels assigned
-            }
-            return false;
+            const labelToAdd = "NEW ISSUE";
 
-      - name: Add "NEW ISSUE" label
-        if: steps.check-labels.outputs.result == 'true'
-        uses: andymantell/simple-issue-labeler@v1.0.4
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          labels: 'NEW ISSUE'
+            // Prüfen, ob das Issue bereits Labels hat
+            if (issue.labels.length === 0) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                labels: [labelToAdd],
+              });
+            } else {
+              console.log("Issue already has labels, no action taken.");
+            }
