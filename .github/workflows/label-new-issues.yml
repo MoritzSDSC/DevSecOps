@@ -23,7 +23,7 @@ jobs:
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: issue.number,
-                labels: [labelToAdd],
+                labels: 'NEW ISSUE',
               });
             } else {
               console.log("Issue already has labels, no action taken.");
