@@ -11,20 +11,8 @@ permissions:
 jobs:
   add-label:
     runs-on: ubuntu-latest
-    steps:
-      - name: Check if issue has labels
-        id: check-labels
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const issue = context.payload.issue;
-            if (issue.labels.length === 0) {
-              return true; // No labels assigned
-            }
-            return false;
-
-      - name: Add "NEW ISSUE" label
-        if: steps.check-labels.outputs.result == 'true'
+      - name: Add inital label
         uses: andymckay/labeler@master
         with:
           add-labels: "NEW ISSUE"
+          ignore-if-labeled: true
