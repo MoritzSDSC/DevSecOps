@@ -9,10 +9,10 @@ permissions:
   issues: write
 
 jobs:
-  add-label:
+  automate-issues-labels:
     runs-on: ubuntu-latest
-      - name: Add inital label
-        uses: andymckay/labeler@master
+    steps:
+      - uses: andymckay/labeler@1.0.2
         with:
           add-labels: "NEW ISSUE"
           ignore-if-labeled: true
